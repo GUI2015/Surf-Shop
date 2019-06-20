@@ -5,6 +5,7 @@ module.exports = {
 		let posts = await Post.find({});
 		res.render('posts/index', { posts });
 	},
+
 	// Post new
 	newPost(req, res, next) {
 		res.render('posts/new');
@@ -16,6 +17,7 @@ module.exports = {
 		let post = await Post.create(req.body);
 		res.redirect(`/posts/${post.id}`);
 	},
+
 	//Show Post
 	async showPost(req, res, next) {
 		let post = await Post.findById(req.params.id);
