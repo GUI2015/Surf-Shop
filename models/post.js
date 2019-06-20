@@ -3,8 +3,9 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
 	title: String,
 	price: String,
-	description: [String],
-	images: String,
+	description: String,
+	images: [String],
+	location: String,
 	lat: Number,
 	lag: Number,
 	author: {
